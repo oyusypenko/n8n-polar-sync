@@ -1,0 +1,46 @@
+# Environment variables with sensitive data
+.env
+.env.local
+.env.production
+
+# Docker volumes and data
+data/
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if using Node.js)
+node_modules/
+npm-debug.log*
+
+# MongoDB data directory (if mounted locally)
+mongodb_data/ 
+
+# n8n data directory
+n8n-data/credentials/
+n8n-data/database.sqlite*
+n8n-data/logs/
+n8n-data/tmp/
+n8n-data/.cache/
+n8n-data/*.log
+n8n-data/n8nEventLog*
+n8n-data/ssh/
+n8n-data/binaryData/
+n8n-data/config
+
+# Keep these directories in git
+!n8n-data/workflows/
+!n8n-data/nodes/

@@ -1,0 +1,148 @@
+{
+  "properties": {
+    "polar_user": {
+      "type": "string",
+      "required": false,
+      "restrictions": "none",
+      "description": "Absolute link to user owning the sleep"
+    },
+    "date": {
+      "type": "string(date)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Result date of the sleep"
+    },
+    "sleep_start_time": {
+      "type": "string(date-time)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Start timestamp of the sleep as ISO-8601 datetime string"
+    },
+    "sleep_end_time": {
+      "type": "string(date-time)",
+      "required": false,
+      "restrictions": "none",
+      "description": "End timestamp of the sleep as ISO-8601 datetime string"
+    },
+    "device_id": {
+      "type": "string",
+      "required": false,
+      "restrictions": "none",
+      "description": "Id of the device the sleep was measured with"
+    },
+    "continuity": {
+      "type": "number(float)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Continuity is an estimate of how continuous the sleep was on a scale of 1.0 \u2013 5.0, where 5.0 reflects uninterrupted sleep. The lower the value the more fragmented the sleep was."
+    },
+    "continuity_class": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Verbal assessments of sleep continuity Very continuous sleep (5) Continuous sleep (4) Fairly continuous sleep (3) Fairly fragmented sleep (2) Fragmented sleep (1)"
+    },
+    "light_sleep": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Total time in seconds spent in light sleep stage between when you fell asleep and when you woke up. Corresponds to N1+ N2 according to AASM classification."
+    },
+    "deep_sleep": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Total time in seconds spent in the deep sleep stage between when you fell asleep and when you woke up. Corresponds to N3 according to AASM classification."
+    },
+    "rem_sleep": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Total time in seconds spent in REM sleep stage between when you fell asleep and when you woke up. REM stands for rapid eye movement."
+    },
+    "unrecognized_sleep_stage": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Total time in seconds spent in unrecognised sleep stage. Sometimes it's impossible to recognize sleep stages. This might happen when, for example, the wrist strap is not tight enough, or if you sleep on your hand."
+    },
+    "sleep_score": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Sleep score summarizes the amount and quality of your sleep into a single number on a scale of 1 \u2013 100. Sleep score tells you how well you slept compared to the indicators of a good night's sleep based on the current sleep science. It consists of six components; sleep time, long interruptions, continuity, actual sleep, REM sleep, and deep sleep."
+    },
+    "total_interruption_duration": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "The total time in seconds you spent awake between when you fell asleep and when you woke up."
+    },
+    "sleep_charge": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Sleep score compared to your usual level from the past 28 days.Scale: much below usual (1) \u2013 below usual (2) \u2013 usual (3) \u2013 above usual (4) \u2013 much above usual(5)."
+    },
+    "sleep_goal": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Time goal in seconds for sleep selectedby user. A default value of the setting is based on age-related sleep duration recommendations."
+    },
+    "sleep_rating": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Numeric value given by user for representing the quality of sleep. Selection scale: Very poorly(1), poorly(2), ok(3), well(4), very well(5). 0 means no value is given."
+    },
+    "short_interruption_duration": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Total time in seconds of short interruptions. Short interruption is interruption in sleep of less than 90 seconds."
+    },
+    "long_interruption_duration": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Total time in seconds of long interruptions. Long interruption is interruption in sleep of 90 seconds or more."
+    },
+    "sleep_cycles": {
+      "type": "integer(int32)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Number of sleep cycles."
+    },
+    "group_duration_score": {
+      "type": "number(float)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Sleep score consists of six components that are grouped under three themes. Score for sleep duration theme looks at your sleep time compared to your \u2018preferred sleep time\u2019 setting and the age-related duration recommendations. Group duration score ranges from 1.0 to 100.0. It is interpreted as textual feedback: poor, moderate or good amount."
+    },
+    "group_solidity_score": {
+      "type": "number(float)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Sleep score consists of six components that are grouped under three themes. Score for sleep solidity theme is the average of the component scores of long interruptions, continuity and actual sleep. Group solidity score ranges from 1.0 to 100.0. It is interpreted as textual feedback: poor, moderate or good solidity."
+    },
+    "group_regeneration_score": {
+      "type": "number(float)",
+      "required": false,
+      "restrictions": "none",
+      "description": "Sleep score consists of six components that are grouped under three themes. Score for regeneration theme is the average of the scores of REM sleep and deep sleep. Group regeneration score ranges from 1.0 to 100.0. It is interpreted as textual feedback: poor, moderate or good regeneration"
+    },
+    "hypnogram": {
+      "type": "object",
+      "required": false,
+      "restrictions": "none",
+      "description": "The time span between when you fell asleep and when you woke up is classified into light, deep or REM sleep, or unrecognised or wake in 30-s epochs. 0 = WAKE, 1 = REM, 2 = LIGHTER NON-REM, 3 = LIGHT NON-REM, 4 = DEEP NON-REM, 5 = UNKNOWN (eg. due to bad skin contact)."
+    },
+    "heart_rate_samples": {
+      "type": "object",
+      "required": false,
+      "restrictions": "none",
+      "description": "5 min average samples of heart rate from the duration of the sleep. Default time between samples is 5 minutes. There may be periods with samples more often than every 5 minutes. Unit of samples is beats per minute (bpm)."
+    }
+  }
+}
